@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WebSocket</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="chat-shell">
+        <section class="chat-card" aria-label="Chat de prueba WebSocket">
+            <header class="chat-header">
+                <div>
+                    <p class="eyebrow">Laboratorio WebSocket</p>
+                    <h1>Chat en vivo</h1>
+                </div>
+                <span id="connectionStatus" class="status status-connecting">Conectando</span>
+            </header>
+
+            <div id="messages" class="messages" aria-live="polite">
+                <p class="empty-state">Los mensajes aparecerán aquí cuando envíes algo.</p>
+            </div>
+
+            <form id="chatForm" class="chat-form">
+                <label class="field">
+                    <span>Usuario</span>
+                    <input type="text" id="usernameInput" placeholder="Tu nombre" autocomplete="nickname">
+                </label>
+
+                <label class="field message-field">
+                    <span>Mensaje</span>
+                    <input type="text" id="messageInput" placeholder="Escribe un mensaje" autocomplete="off">
+                </label>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
