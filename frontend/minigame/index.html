@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego multijugador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main class="game-shell">
+        <section class="game-panel" aria-label="Minijuego multijugador WebSocket">
+            <header class="game-header">
+                <div>
+                    <p class="eyebrow">WebSocket Arena</p>
+                    <h1>Minijuego multijugador</h1>
+                </div>
+                <span id="connectionStatus" class="status status-connecting">Conectando</span>
+            </header>
+
+            <div class="toolbar">
+                <label class="field">
+                    <span>Nombre</span>
+                    <input id="playerNameInput" type="text" maxlength="16" autocomplete="nickname" placeholder="Jugador">
+                </label>
+
+                <div class="players-counter">
+                    <span id="playersCount">0</span>
+                    <small>jugadores</small>
+                </div>
+            </div>
+
+            <div class="arena-wrap">
+                <canvas id="gameCanvas" width="720" height="440" aria-label="Arena del juego"></canvas>
+                <p id="connectionMessage" class="system-message" hidden></p>
+            </div>
+
+            <footer class="game-footer">
+                <span>Muévete con flechas o WASD. Dispara con click hacia el cursor.</span>
+                <span>Cada jugador tiene 3 vidas</span>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
