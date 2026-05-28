@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "start",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["run", "start"],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "startgame",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["run", "startgame"],
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
